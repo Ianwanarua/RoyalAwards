@@ -1,0 +1,108 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+<style>
+    .panel {
+        border: none;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default" style="margin-top:5%">
+                <img class="card-img-top mb-10 img-responsive" src="{{project.image.url}}"
+                    style="height:auto;width:100%">
+                <div class="panel-body"  >
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: black;"> Title :  {{project.title}} </p>
+                            <p style="color: black;">
+                                Description :{{ project.description  }}
+                            </p>
+                            <p><a href="{{project.url}}" class="text-right" style="text-decoration: none; font-size: 20px; color: rgb(64, 119, 129);">
+                                    View Site <i class="fas fa-link"></i>
+                                </a></p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="font-family: 'Oregano'; font-size: large;">
+            <h2 class="mt-4" style="font-size: 35px;">Review Rate</h2><br>
+            {% if rating_status %}
+            <h5 style="font-size: 25px;">Thank You For Voting for {{project.title}}</h5>
+            {% else %}
+            {% if user.is_authenticated %}
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button class=" btn-lg btn-dark btn-block"  value="review" type="submit">Rate</button>
+            </form>
+            {% endif %}
+            {% endif %}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<div class="container-fluid" style="font-family: 'oregano'; font-weight: 600;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h3 class="text-center">RESULTS</h3>
+        <div class="col-md-12">
+            <div class="col-md-2" id="c">
+                <span class="sc">Average</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">Design</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">Creativity</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">Content</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">Usability</span>
+            </div>
+            
+            <div class="col-md-2" id="c">
+                <span class="sc">Rated by:</span>
+            </div>
+        </div>
+
+        {% for reviews in reviews %}
+        <div class="col-md-12">
+            {% if project.id == reviews.project.id %}
+
+            <div class="col-md-2" id="c">
+                <span class="sc">{{ reviews.average  }}</span>
+            </div>
+            <div class="col-md-2">
+                <span class="sc">{{ reviews.design }}</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">{{ reviews.creativity }}</span>
+            </div>
+            <div class="col-md-2" id="c">
+                <span class="sc">{{ reviews.content }}</span>
+            </div>
+            <div class="col-md-2" id="u">
+                <span class="sc">{{ reviews.usability }}</span>
+            </div>
+           
+            <div class="col-md-2" id="c">
+                <span class="sc">{{ reviews.user.username }}</span>
+            </div>
+
+            <!-- {% widthratio reviews.average ratings|length 1%} -->
+
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <div class="col-md-2"></div>
+    </div>
+    {% endblock %}

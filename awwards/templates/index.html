@@ -1,0 +1,140 @@
+{%extends 'base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+<style>
+    .fadeoverlay {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-image: linear-gradient(rgba(34, 30, 30, 0.5), rgba(3, 3, 3, 0.027));
+    }
+
+    .fadeoverlay:hover .overlay {
+        opacity: 1;
+    }
+
+    .img-responsive {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
+    <div class="hero-slider" style="margin-top: -20px;">
+        <div class="slider-item th-fullpage hero-area" style="background-image: url('/static/img/1.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 45px;font-weight: normal;font-family: Oregano;color: #c17757;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">WELCOME TO ROYAL AWARDS</h1>
+                        <hr data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".2" style="width: 550px;top: 551.78px;border: 1px solid #c17757;">
+                        <p style="font-size: 20px;font-weight: 400;color: #f8e2e2;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">An award recognizing your talent is an honor. That matters alot to me<br> - Payal Rohatgi</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-dark" href="#">Royal_Awards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url('/static/img/2.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 45px;font-weight: normal;font-family: Oregano;color: #6d5a28;top:329px;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">SIGN UP</h1>
+                        <hr data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".2" style="width: 550px;top: 551.78px;border: 1px solid #6d5a28;">
+                        <p style="font-size: 20px;font-weight: 400;color: #998c8c;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
+                            officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-dark" href="#">Sign_Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url('/static/img/3.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 45px;font-weight: normal;font-family: Oregano;color: #d2db4a;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">BROWSE PROJECTS</h1>
+                        <hr data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".2" style="width: 550px;top: 551.78px;border: 1px solid #d2db4a;">
+                        <p style="font-size: 20px;font-weight: 400;color: #fffbfb;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
+                            officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-dark" href="/">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url('/static/img/4.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 45px;font-weight: normal;font-family: Oregano;color: #c2c459;;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">VIEW AND <br>POST PROJECTS</h1>
+                        <hr data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".2" style="width: 550px;top: 551.78px;border: 1px solid #c2c459;">
+                        <p style="font-size: 20px;font-weight: 400;color: #fffbfb;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
+                            officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-dark" href="service.html">View & post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url('/static/img/5.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 45px;font-weight: normal;font-family: Oregano;color: #f3bb5f;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1"> RATE PROJECTS</h1>
+                        <hr data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".2" style="width: 550px;top: 551.78px;border: 1px solid #c17757;">
+                        <p style="font-size:20px;font-weight: 400;color: #998c8c;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
+                            officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-dark" href="service.html">RATE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class='text-center' style="font-family: 'Oregano', cursive; text-align: center; font-size: 40px; color: black;">Royal_Awards Projects</h5>
+    <div class="container-fluid" style="margin-bottom: 10%;">
+        <hr style="width: 550px;top: 551.78px;border: 1px solid #000000;"/>
+        {% for project in projects%}
+        <div class="col-lg-4" style="padding-top: 1%;">
+            <div
+                style="background-color: rgba(21, 22, 22, 0.8);">
+                <div class="fadeoverlay">
+                    <a href="{% url 'viewProject' id=project.id %}">
+                        <img src="{{project.image.url}}" class="img-responsive" alt="{{image.name}}"
+                            style="width:100%;width:100%">
+                        <div class="overlay">
+                            <div class="overlay">
+                                <div class="overlay-text" style="text-align: center;color: white; font-size: 45px;">
+                                    vote now
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="padding-top: 5%">
+                    <div class="col-md-12">
+                        <p><a href="{{project.url}}" class="text-right" style="text-decoration: none; color: rgb(177, 177, 43);">
+                                {{project.title}} <i class="fas fa-link"></i>
+                            </a></p>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 5% ;font-size:15pt; font-family: 'Oregano'; color: white;">
+                    <div class="col-md-6">Submitted On: {{project.date|date:"M d, Y" }} </div>
+                    <div class="col-md-6" style="padding-bottom: 5%">Posted By: {{project.user.username}}</div>
+                   
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+<footer class="footer">
+    <p class="text-center">© Royal_Awards 2021. All Rights Reserved</p>
+</footer>
+{% endblock %}
