@@ -60,3 +60,11 @@ To get the code..
 * Css
 * Javascript
 * Bootstrap4
+
+## Known Bugs
+
+There are no known bugs currently but if you come across one feel free to contact me.
+
+## Contact
+
+For queries reach me through [Ian.wanarua@student.moringaschool.com](ian.wanarua@student.moringaschool.com)
