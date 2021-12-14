@@ -13,3 +13,11 @@ This is a django application where Users are allowed to see projects posted and 
 ## Live Link
 
 To view the site [Click here.](https://royalawards.herokuapp.com/)
+
+## User Story
+
+* A User can register in the application by feeding in his/her email,username and password.
+* A User is able update their profile by adding a profile picture and also their Bio.
+* A User can browse projects posted by different Users on the application. 
+* User is able to rate on projects posted on the application.
+* A user is able to post their projects on the application.
