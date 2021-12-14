@@ -36,9 +36,9 @@ class ProjectTestClass(TestCase):
         profile=self.new_profile)
 
 
-    # def tearDown(self):
-        # self.new_profile.delete()
-        # self.new_project.delete()
+    def tearDown(self):
+        self.new_profile.delete()
+        self.new_project.delete()
 
 
     def test_instance_true(self):
