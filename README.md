@@ -21,3 +21,13 @@ To view the site [Click here.](https://royalawards.herokuapp.com/)
 * A User can browse projects posted by different Users on the application. 
 * User is able to rate on projects posted on the application.
 * A user is able to post their projects on the application.
+
+## Prerequisites
+
+For this system to work on your pc you need the following; 
+
+1. Python3.8
+2. Django
+3. Pip
+4. Virtual Environment(virtual)
+5. A text editor (Vscode)
