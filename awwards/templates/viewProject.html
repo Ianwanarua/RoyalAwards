@@ -17,11 +17,11 @@
                 <div class="panel-body" >
                     <div class="row">
                         <div class="col-md-12">
-                            <p style="color: black;"> Title :  {{project.title}} </p>
-                            <p style="color: black;">
+                            <p style="color: black; text-align: center;"> Title :  {{project.title}} </p>
+                            <p style="color: black; text-align: center;">
                                 Description :{{ project.description  }}
                             </p>
-                            <p><a href="{{project.url}}" class="text-right" style="text-decoration: none; font-size: 20px; color: rgb(64, 119, 129);">
+                            <p><a href="{{project.url}}" class="" style="text-decoration: none; font-size: 20px; color: rgb(64, 119, 129);">
                                     View Site <i class="fas fa-link"></i>
                                 </a></p>
                             <br>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="col-md-6" style="font-family: 'Oregano'; font-size: large; left: 15em;">
-            <h2 class="text-center" style="font-size: 35px;color: goldenrod; padding: 2em;">Review Rate</h2><br>
+            <h2 class="text-center" style="font-size: 35px;color: goldenrod; padding: 1em;padding-top: 4em;">Review Rate</h2><br>
             {% if rating_status %}
             <h5 style="font-size: 25px;">Thank You For Voting for {{project.title}}</h5>
             {% else %}
